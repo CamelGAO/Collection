@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Collection", "Collection\Collection.vcxproj", "{4603123A-6E5D-4E81-AC2B-011BAC5ACA7D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StraightInsertionSort", "Collection\Collection.vcxproj", "{4603123A-6E5D-4E81-AC2B-011BAC5ACA7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sort", "Sort", "{9C8FB25E-9B79-43D0-BDA0-78147CFECC92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InsertSort", "InsertSort", "{1150F97C-2F6E-4A8B-9207-9C7F08184918}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4603123A-6E5D-4E81-AC2B-011BAC5ACA7D} = {1150F97C-2F6E-4A8B-9207-9C7F08184918}
+		{1150F97C-2F6E-4A8B-9207-9C7F08184918} = {9C8FB25E-9B79-43D0-BDA0-78147CFECC92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EDFCBAA-51E4-4EBB-A1E7-6562C9AF9FC1}
