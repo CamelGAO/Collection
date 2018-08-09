@@ -14,33 +14,32 @@ namespace MySort
 		size_t left, right;
 		left = 0;
 		right = _length - 1;
+		T pivot = _data[left];
 
-		while(left != right)
+		while(left < right)
 		{
-			for (; right > left; --right)
+			for (; left < right; --right)
 			{
-				if (_compare(_data[left], _data[right]))
-					continue;
-
-				T temp = _data[right];
-				_data[right] = _data[left];
-				_data[left] = temp;
-				++left;
-				break;
+				if (_compare(_data[right], pivot))
+				{
+					_data[left] = _data[right];
+					++left;
+					break;
+				}
 			}
 
 			for (; left < right; ++left)
 			{
-				if (_compare(_data[left], _data[right]))
-					continue;
-
-				T temp = _data[right];
-				_data[right] = _data[left];
-				_data[left] = temp;
-				--right;
-				break;
+				if (_compare(pivot, _data[left]))
+				{
+					_data[right] = _data[left];
+					--right;
+					break;
+				}
 			}
 		}
+		_data[left] = pivot;
+
 		return left;
 	}
 
